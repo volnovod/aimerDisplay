@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.Controller">
+   <children>
+      <Pane fx:id="videoPane" prefHeight="700.0" prefWidth="1200.0" />
+      <Pane prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Pane layoutX="1103.0" layoutY="2.0" prefHeight="600.0" prefWidth="95.0">
+               <children>
+                  <Button ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#camsChanger" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Выбор камеры" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Поле узкое/ широкое" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Фокусировка" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Выбор оружия" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="2.0" layoutY="2.0" prefHeight="600.0" prefWidth="95.0">
+               <children>
+                  <Button ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#displayChanger" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Переключение экрана" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Яркость+" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Яркость-" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Контраст+" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" style="-fx-background-radius: 22;" text="Контраст-" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="500.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+               <children>
+                  <Line endX="20.0" layoutX="100.0" layoutY="100.0" startX="-20.0" strokeWidth="2.0" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="98.0" startX="-20.0" stroke="WHITE" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="102.0" startX="-20.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="100.0" layoutY="100.0" startY="-20.0" strokeWidth="2.0" />
+                  <Line endY="-2.0" layoutX="98.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endY="-2.0" layoutX="102.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="98.0" startX="2.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="102.0" startX="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="98.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="102.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Label layoutX="570.0" layoutY="455.0" style="-fx-border-color: gray; -fx-background-color: white;" text="1255 м" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Pane layoutX="300.0" layoutY="510.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: gray; -fx-background-color: white;">
+               <children>
+                  <Label layoutX="22.0" layoutY="5.0" text="Паспорт цели:">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="30.0" text="№ -">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="30.0" text="1">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="50.0" text="Широта - ">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="50.0" text="42.1256">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="70.0" text="Довгота - ">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="70.0" text="32.2145">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="90.0" text="Состояние - ">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="90.0" text="active">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="500.0" layoutY="510.0" prefHeight="50.0" prefWidth="150.0" style="-fx-border-color: gray; -fx-background-color: white;">
+               <children>
+                  <Label layoutX="5.0" layoutY="5.0" text="Угол меcта">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="5.0" text="13">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="5.0" layoutY="25.0" text="Азимут">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="25.0" text="126">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Path fill="BLACK" layoutX="600.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: gray;">
+                <elements>
+                    <MoveTo y="5.0" />
+                    <LineTo x="10.0" />
+                    <LineTo x="-10.0" />
+                    <LineTo y="5.0" />
+                </elements>
+            </Path>
+         </children></Pane>
+   </children>
+</AnchorPane>

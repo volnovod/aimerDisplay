@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.DriverController">
+   <children>
+      <Pane fx:id="videoPane" prefHeight="700.0" prefWidth="1200.0" />
+      <Pane prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Pane layoutX="500.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+               <children>
+                  <Line endX="20.0" layoutX="100.0" layoutY="100.0" startX="-20.0" strokeWidth="2.0" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="98.0" startX="-20.0" stroke="WHITE" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="102.0" startX="-20.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="100.0" layoutY="100.0" startY="-20.0" strokeWidth="2.0" />
+                  <Line endY="-2.0" layoutX="98.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endY="-2.0" layoutX="102.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="98.0" startX="2.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="102.0" startX="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="98.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="102.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1048.0" layoutY="2.0" prefHeight="160.0" prefWidth="150.0" style="-fx-border-color: gray; -fx-border-radius: 22;">
+               <children>
+                  <Label fx:id="timeLabel" layoutX="35.0" layoutY="5.0" text="Время">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateLabel" layoutX="30.0" layoutY="30.0" text="Дата">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="55.0" text="25°С, зовн пов" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="80.0" text="25°С, внутр пов ">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="105.0" text="Д-42°">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="130.0" text="Ш-15°">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="compassPane" layoutX="895.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="150.0" style="-fx-border-color: gray; -fx-border-radius: 22;">
+               <children>
+                  <Circle fill="#ebeef2" layoutX="75.0" layoutY="80.0" opacity="0.46" radius="70.0" stroke="#fcfafa" strokeType="INSIDE" />
+                  <Text layoutX="70.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="71.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="142.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Text>
+                  <Circle layoutX="75.0" layoutY="80.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" style="-fx-fill: transparent;" />
+                  <Circle layoutX="75.0" layoutY="80.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" style="-fx-fill: transparent;" />
+                  <Line endX="-42.0" layoutX="75.0" layoutY="80.0" startX="-67.0" strokeWidth="2.0" />
+                  <Line endX="67.0" layoutX="75.0" layoutY="80.0" startX="42.0" strokeWidth="2.0" />
+                  <Line endY="-67.0" layoutX="75.0" layoutY="80.0" startY="-42.0" strokeWidth="2.0" />
+                  <Line endY="67.0" layoutX="75.0" layoutY="80.0" startY="42.0" strokeWidth="2.0" />
+                  <Line endX="-30.0" endY="-30.0" layoutX="75.0" layoutY="80.0" startX="-48.0" startY="-48.0" strokeWidth="2.0" />
+                  <Line endX="48.0" endY="48.0" layoutX="75.0" layoutY="80.0" startX="30.0" startY="30.0" strokeWidth="2.0" />
+                  <Line endX="-30.0" endY="30.0" layoutX="75.0" layoutY="80.0" startX="-48.0" startY="48.0" strokeWidth="2.0" />
+                  <Line endX="48.0" endY="-48.0" layoutX="75.0" layoutY="80.0" startX="30.0" startY="-30.0" strokeWidth="2.0" />
+                  <Pane fx:id="compass" layoutX="60.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="30.0">
+                     <children>
+                        <Path fill="DODGERBLUE" layoutX="15.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo y="-60.0" />
+                              <LineTo x="-15.0" />
+                              <ArcTo radiusX="15.0" radiusY="15.0" sweepFlag="true" x="15.0" />
+                              <LineTo y="-60.0" />
+                           </elements>
+                        </Path>
+                        <Path fill="RED" layoutX="15.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo y="60.0" />
+                              <LineTo x="-15.0" />
+                              <ArcTo radiusX="15.0" radiusY="15.0" sweepFlag="true" x="15.0" />
+                              <LineTo y="60.0" />
+                           </elements>
+                        </Path>
+                        <Circle fill="WHITE" layoutX="15.0" layoutY="60.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#1a2f43" layoutX="15.0" layoutY="60.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="compassPane1" layoutX="742.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="150.0" style="-fx-border-color: gray; -fx-border-radius: 22;">
+               <children>
+                  <Label layoutX="25.0" layoutY="2.0" text="Напрямок" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="18.0" text="руху" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ubuntu Light Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <Path fx:id="secondGunAzimuth1" fill="WHITE" layoutX="75.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE">
+                     <elements>
+                        <MoveTo x="-10.0" y="60.0" />
+                        <LineTo x="10.0" y="60.0" />
+                        <LineTo x="10.0" y="-20.0" />
+                        <LineTo x="30.0" y="-20.0" />
+                        <LineTo y="-30.0" />
+                        <LineTo x="-30.0" y="-20.0" />
+                        <LineTo x="-10.0" y="-20.0" />
+                        <LineTo x="-10.0" y="60.0" />
+                     </elements>
+                  </Path>
+               </children>
+            </Pane>
+            <Pane layoutX="200.0" layoutY="615.0" prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: gray; -fx-background-radius: 22;">
+               <children>
+                  <Label layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Координати" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="25.0" text="Ш - 32.2356" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="40.0" text="Д - 23.2356" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="170.0" layoutY="5.0" text="Швидкість" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="170.0" layoutY="25.0" text="32 км/год" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="320.0" layoutY="5.0" text="Запас пального(л)" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="370.0" layoutY="25.0" text="325" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="500.0" layoutY="5.0" text="Запас ходу(км)" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="540.0" layoutY="25.0" text="820" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="650.0" layoutY="5.0" text="Стан двигуна" textFill="#0eff00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="110.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="140.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="140.0">
+                     <children>
+                        <Path fill="BLACK" stroke="BLACK" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo y="70.0" />
+                              <LineTo x="140.0" y="70.0" />
+                              <ArcTo radiusX="70.0" radiusY="70.0" sweepFlag="true" y="70.0" />
+                           </elements>
+                        </Path>
+                        <Path fill="#446483" layoutX="20.0" layoutY="70.0" stroke="#f5f3f3" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo />
+                              <LineTo y="-5.0" />
+                              <LineTo x="5.0" y="-15.0" />
+                              <LineTo x="30.0" y="-15.0" />
+                              <LineTo x="35.0" y="-27.0" />
+                              <LineTo x="90.0" y="-27.0" />
+                              <LineTo x="90.0" y="-10.0" />
+                              <LineTo x="95.0" y="-8.0" />
+                              <LineTo x="95.0" />
+                              <LineTo />
+                           </elements>
+                        </Path>
+                        <Circle centerX="35.0" centerY="70.0" fill="#446483" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle centerX="95.0" centerY="70.0" fill="#446483" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="70.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" style="-fx-fill: transparent;" />
+                     </children>
+                  </Pane>
+                  <Pane layoutY="140.0" prefHeight="140.0" prefWidth="140.0">
+                     <children>
+                        <Path fill="BLACK" stroke="BLACK" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo y="70.0" />
+                              <LineTo x="140.0" y="70.0" />
+                              <ArcTo radiusX="70.0" radiusY="70.0" sweepFlag="true" y="70.0" />
+                           </elements>
+                        </Path>
+                        <Circle centerX="70.0" centerY="70.0" fill="DODGERBLUE" radius="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" style="-fx-fill: transparent;" />
+                        <Path fill="#446483" layoutX="40.0" layoutY="70.0" stroke="#f5f3f3" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo />
+                              <LineTo x="5.0" y="-27.0" />
+                              <LineTo x="50.0" y="-27.0" />
+                              <LineTo x="55.0" />
+                              <LineTo />
+                           </elements>
+                        </Path>
+                        <Path fill="#446483" layoutX="45.0" layoutY="80.0" stroke="#f5f3f3" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo />
+                              <LineTo y="-10.0" />
+                              <LineTo x="7.0" y="-10.0" />
+                              <LineTo x="7.0" />
+                              <LineTo />
+                           </elements>
+                        </Path>
+                        <Path fill="#446483" layoutX="85.0" layoutY="80.0" stroke="#f5f3f3" strokeType="INSIDE">
+                           <elements>
+                              <MoveTo />
+                              <LineTo y="-10.0" />
+                              <LineTo x="7.0" y="-10.0" />
+                              <LineTo x="7.0" />
+                              <LineTo />
+                           </elements>
+                        </Path>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="mapPane" prefHeight="700.0" prefWidth="1200.0" visible="false">
+         <children>
+            <WebView fx:id="mapWebView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="1096.0" layoutY="170.0" prefHeight="500.0" prefWidth="102.0">
+         <children>
+            <Button ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Вибір камери" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#mapCamChanger" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Карта/ камера" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Обдув" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Двірник" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Меню" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="2.0" prefHeight="600.0" prefWidth="102.0">
+         <children>
+            <Button fx:id="changeDisplay" ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#displayChanger" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Переключення екрану" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість +" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість -" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст+" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст-" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

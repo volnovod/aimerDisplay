@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.ButController">
+   <children>
+      <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="70.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#92a4b5" layoutX="70.0" layoutY="70.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/up_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/down_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="85.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/right_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/left_arrow.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="up" layoutX="55.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#upclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="up" />
+      <Button fx:id="down" layoutX="55.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#downclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="down" />
+      <Button fx:id="right" layoutX="85.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#rightclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="right" />
+      <Button fx:id="left" layoutX="25.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#leftclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="left" />
+   </children>
+</Pane>

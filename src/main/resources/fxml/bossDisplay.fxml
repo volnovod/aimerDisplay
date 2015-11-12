@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.BossController">
+   <children>
+      <Pane layoutX="940.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #b5b5b5; -fx-background-radius: 12;">
+         <children>
+            <Label layoutX="5.0" layoutY="5.0" text="Паспорт цілі" />
+            <Label layoutX="15.0" layoutY="20.0" text="- 1" />
+            <Label layoutX="15.0" layoutY="35.0" text="- 42.2356, 23.2569" />
+            <Label layoutX="15.0" layoutY="50.0" text="- 1.1 км" />
+            <Label layoutX="15.0" layoutY="65.0" text="- не рухається" />
+            <Label layoutX="15.0" layoutY="80.0" text="- БМ-1" />
+         </children>
+      </Pane>
+      <Pane fx:id="videoPane" prefHeight="700.0" prefWidth="1200.0" />
+      <Pane prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Pane fx:id="regionPane" layoutX="200.0" layoutY="150.0" maxHeight="600.0" maxWidth="1000.0" minHeight="200.0" minWidth="200.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Region fx:id="region" maxHeight="600.0" maxWidth="1000.0" minHeight="200.0" minWidth="200.0" onMouseDragged="#dragged" onMouseMoved="#moved" onMousePressed="#pressed" onMouseReleased="#released" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-color: red; -fx-border-width: 3;" />
+                  <Pane fx:id="gunpoint" layoutX="200.0" layoutY="100.0" onMouseDragged="#gunpointDragged" onMousePressed="#gunpointPressed" onMouseReleased="#gunpointReleased" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+                     <children>
+                        <Line endX="20.0" layoutX="100.0" layoutY="100.0" startX="-20.0" strokeWidth="2.0" />
+                        <Line endX="-2.0" layoutX="100.0" layoutY="98.0" startX="-20.0" stroke="WHITE" />
+                        <Line endX="-2.0" layoutX="100.0" layoutY="102.0" startX="-20.0" stroke="WHITE" />
+                        <Line endY="20.0" layoutX="100.0" layoutY="100.0" startY="-20.0" strokeWidth="2.0" />
+                        <Line endY="-2.0" layoutX="98.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                        <Line endY="-2.0" layoutX="102.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                        <Line endX="20.0" layoutX="100.0" layoutY="98.0" startX="2.0" stroke="WHITE" />
+                        <Line endX="20.0" layoutX="100.0" layoutY="102.0" startX="2.0" stroke="WHITE" />
+                        <Line endY="20.0" layoutX="98.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+                        <Line endY="20.0" layoutX="102.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="resizePane" layoutX="590.0" layoutY="390.0" onMouseDragged="#resizeDragged" onMousePressed="#resizePressed" onMouseReleased="#resizeReleased" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: gray;" />
+               </children>
+            </Pane>
+            <Pane layoutX="2.0" layoutY="2.0" prefHeight="550.0" prefWidth="102.0">
+               <children>
+                  <Button fx:id="changeDisplay" ellipsisString="" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#displayChanger" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Переключення екрану" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість +" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість -" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст+" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст-" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="405.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Строб +" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Строб -" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="1096.0" layoutY="2.0" prefHeight="550.0" prefWidth="102.0">
+               <children>
+                  <Button ellipsisString="" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Вибір камери" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Зум" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="145.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Фокусування" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Захват цілі" textAlignment="CENTER" wrapText="true" />
+                  <Button ellipsisString="" layoutX="5.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Супроводження" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="355.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Запис цілі в БД" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="425.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Стоп супроводження" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="5.0" layoutY="495.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Скидання цілі" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="5.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="140.0">
+               <children>
+                  <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="70.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#92a4b5" layoutX="70.0" layoutY="70.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/up_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/down_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="85.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/right_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/left_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="up" layoutX="55.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#upclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="up" />
+                  <Button fx:id="down" layoutX="55.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#downclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="down" />
+                  <Button fx:id="right" layoutX="85.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#rightclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="right" />
+                  <Button fx:id="left" layoutX="25.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#leftclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="left" />
+               </children>
+            </Pane>
+            <Pane layoutX="1055.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="140.0">
+               <children>
+                  <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="70.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#92a4b5" layoutX="70.0" layoutY="70.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/up_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="55.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/down_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="85.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/right_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/left_arrow.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="up1" layoutX="55.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#upclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="up" />
+                  <Button fx:id="down1" layoutX="55.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#downclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="down" />
+                  <Button fx:id="right1" layoutX="85.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#rightclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="right" />
+                  <Button fx:id="left1" layoutX="25.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#leftclick" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="left" />
+               </children>
+            </Pane>
+            <Pane layoutX="200.0" layoutY="625.0" prefHeight="70.0" prefWidth="800.0">
+               <children>
+                  <Button layoutX="40.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Ок" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="200.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Відміна" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="360.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Зберегти модель цілі" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="520.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Ціль в БМ-1" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="680.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Ціль в БМ-2" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="100.0" prefHeight="70.0" prefWidth="500.0">
+               <children>
+                  <Button layoutX="40.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Автопошук вкл/викл" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="200.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Вибір еталона+" textAlignment="CENTER" wrapText="true" />
+                  <Button layoutX="360.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="110.0" style="-fx-background-radius: 22;" text="Вибір еталона-" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Button layoutX="950.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Еталон цілі" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

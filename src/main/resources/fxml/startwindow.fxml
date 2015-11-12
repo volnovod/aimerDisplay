@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.StartController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="100.0" layoutY="10.0" text="Виберіть камеру">
+               <font>
+                  <Font name="Ubuntu Medium" size="20.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="webcamButton" layoutX="20.0" layoutY="45.0" mnemonicParsing="false" selected="true" text="Веб камера">
+               <toggleGroup>
+                  <ToggleGroup fx:id="cams" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="othercamButton" layoutX="150.0" layoutY="45.0" mnemonicParsing="false" text="Інша камера" toggleGroup="$cams" />
+            <Label fx:id="adressLabel" layoutX="20.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="165.0" text="Введіть адресу камери:" />
+            <TextField fx:id="ipaddressField" layoutX="10.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="300.0" />
+            <Button fx:id="cancelButton" layoutX="220.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="35.0" prefWidth="80.0" text="Вихід" />
+            <Button fx:id="okButton" layoutX="100.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#gotoFirstScene" prefHeight="35.0" prefWidth="80.0" text="Ок" />
+            <Label fx:id="errorLabel" layoutX="10.0" layoutY="125.0" textFill="RED">
+               <font>
+                  <Font name="Ubuntu Medium Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

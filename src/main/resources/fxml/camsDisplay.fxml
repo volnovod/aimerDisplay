@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.displays.view.CamController">
+   <children>
+      <Pane fx:id="videoPane" prefHeight="700.0" prefWidth="1200.0" />
+      <Pane fx:id="mapPane" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Pane layoutX="500.0" layoutY="250.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;">
+               <children>
+                  <Line endX="20.0" layoutX="100.0" layoutY="100.0" startX="-20.0" strokeWidth="2.0" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="98.0" startX="-20.0" stroke="WHITE" />
+                  <Line endX="-2.0" layoutX="100.0" layoutY="102.0" startX="-20.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="100.0" layoutY="100.0" startY="-20.0" strokeWidth="2.0" />
+                  <Line endY="-2.0" layoutX="98.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endY="-2.0" layoutX="102.0" layoutY="100.0" startY="-20.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="98.0" startX="2.0" stroke="WHITE" />
+                  <Line endX="20.0" layoutX="100.0" layoutY="102.0" startX="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="98.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+                  <Line endY="20.0" layoutX="102.0" layoutY="100.0" startY="2.0" stroke="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="mapPane" prefHeight="700.0" prefWidth="1200.0" visible="false">
+         <children>
+            <WebView fx:id="mapWebView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="2.0" prefHeight="600.0" prefWidth="102.0">
+         <children>
+            <Button fx:id="changeDisplay" ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#displayChanger" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Переключення екрану" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість +" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Яскравість -" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст+" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Контраст-" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="1096.0" layoutY="2.0" prefHeight="600.0" prefWidth="102.0">
+         <children>
+            <Button ellipsisString="" layoutX="5.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Вибір камери" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="camMapButton" layoutX="5.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#mapCamChanger" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Карта/ камера" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Обдув" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Двірник" textAlignment="CENTER" wrapText="true" />
+            <Button ellipsisString="" layoutX="5.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Меню" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="5.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="92.0" style="-fx-background-radius: 22;" text="Вибір мультиекрану" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
